@@ -37,11 +37,11 @@ public class Manager {
         List<Integer> toInt = new ArrayList<>();
         int sign;
 
-        for (int i = 0; i < text.length(); i++) {
+        for(int i =0; i < text.length(); i++) {
             sign = text.charAt(i);
-            for (int j = 0; j < 8; j++) {
-                toInt.add((sign % 2));
-                sign /= 2;
+            for(int j =0; j < 8; j++) {
+                toInt.add(sign%2);
+                sign/=2;
             }
         }
         return toInt;
@@ -58,6 +58,7 @@ public class Manager {
     }
 
     public static int parityBit(List<Integer> text, int rowNum) {
+        //bit parzystosci
         int c = 0;
         for (int i = 0; i < text.size(); i++) {
             c += H[rowNum][i] * text.get(i);
@@ -67,6 +68,7 @@ public class Manager {
     }
 
     public static void addParityBit(List<Integer> text) {
+        //dla kazdego rowa mamy bit parzystosci
         for (int i = 0; i < row; i++) {
             text.add(parityBit(text, i));
         }
@@ -89,25 +91,25 @@ public class Manager {
                 bits.clear();
             }
         }
+        //Mamy stan 8 bitow wiadomosci 8 bitow parzystosci
         return code;
     }
 
     public static List<Integer> correction(List<Integer> incorrectMessage, List<Integer> E) {
         List<Integer> toChange = new ArrayList<>(List.copyOf(incorrectMessage));
         //musimy sprawdzic ktora z kolumn jest rowna wektorowi bledow E
-        for (int i = 0; i < col; i++) {
-            for (int j = 0; j < row; j++) {
-                if (H[j][i] != E.get(j)) {
-                    break;
-                }
-                if (j == 7) {
-                    //zamiana bitu
-                    int ch = toChange.get(i);
-                    ch ^= 1;
-                    toChange.set(i, ch);
-                }
-            }
-        }
+      for(int i =0; i < 8; i++) {
+          for(int j =0; j < 8; j++) {
+              if(H[j][i] != toChange.get(j)) {
+                  break;
+              }
+              if(j == 7) {
+                  int number = toChange.get(i);
+                  number^=1;
+                  toChange.set(i,number);
+              }
+              }
+      }
 
         //poprawa dla bledu 2 bitowego
         for (int i = 0; i < col; i++) {
@@ -150,13 +152,14 @@ public class Manager {
         int number;
 
         //jesli w wetorze bledu wystapi wartosc 1 to musimy skorygowac wiadomosc
-        for (int i = 0; i < row; i++) {
-            number = parityBit(text, i);
-            E.add(number);
-            if (number == 1) {
-                verified = false;
-            }
-        }
+       for(int i =0; i < row; i++) {
+           number = parityBit(text,i);
+           E.add(number);
+           if(number == 1) {
+               verified = false;
+           }
+
+       }
 
         if (verified) {
             System.out.println("VERIFIED");

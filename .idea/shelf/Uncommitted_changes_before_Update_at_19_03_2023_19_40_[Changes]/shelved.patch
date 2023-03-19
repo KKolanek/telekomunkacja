@@ -1,0 +1,15 @@
+Index: wiadomoscZakodowana.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>010101101100011011110110011011010010111010100111
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/wiadomoscZakodowana.txt b/wiadomoscZakodowana.txt
+--- a/wiadomoscZakodowana.txt	(revision a085ed808b5b5245ae881a9274cedb831aba9460)
++++ b/wiadomoscZakodowana.txt	(date 1679142449715)
+@@ -1,1 +1,1 @@
+-010101101100011011110110011011010010111010100111
+\ No newline at end of file
++110101101100011011110110011011010010111010100110
+\ No newline at end of file

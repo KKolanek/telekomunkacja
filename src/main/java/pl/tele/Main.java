@@ -12,7 +12,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-
         AnsiFormat fInfo = new AnsiFormat(BLUE_TEXT());
 
         List<Integer> message;
@@ -106,8 +105,8 @@ public class Main {
 
         //ilosc znakow czyli ilosc 16-bitowych wektorow
         int signsNumber = 0;
+        StringBuilder response = new StringBuilder();
         List<Integer> everyWord = new ArrayList<>();
-        System.out.println("rozmiar zlej wiadmosc"+messageWithError.size());
 
         //podzial calej niepoprawnej wiadomosci na mniejsze 16-bitowe wektory
         for(int i = 0; i < messageWithError.size(); i++) {
@@ -118,7 +117,8 @@ public class Main {
                 everyWord.clear();
             }
         }
-        messageWithError.clear(); 
+
+        messageWithError.clear();
 
         FileWriter saveChangedMessage = new FileWriter("wiadomoscOdebrana.txt");
 
@@ -126,10 +126,11 @@ public class Main {
         //ktory reprezentuje jeden znak
         // scalanie 16-bitowych wektorow w jeden i zapis do pliku
         for(int i = 0; i < size; i++) {
-            listOfWords.set(i, Manager.verification(listOfWords.get(i), 16));
+            listOfWords.set(i, Manager.verification(listOfWords.get(i), coded.size() / size));
             messageWithError.addAll(listOfWords.get(i));
             //zamiana kazdego ze zweryfikowanych 16-bitowych wektorow na pojedyncze znaki
             //i zapisanie ich do stringa
+            response.append(Manager.getChars(listOfWords.get(i)));
             saveChangedMessage.write(Manager.getChars(listOfWords.get(i)));
         }
 

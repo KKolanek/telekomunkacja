@@ -59,6 +59,7 @@ public class Manager {
 
     public static int parityBit(List<Integer> text, int rowNum) {
         //bit parzystosci
+        //ale przekazujemy tu tylko 8 bit wiadomosci
         int c = 0;
         for (int i = 0; i < text.size(); i++) {
             c += H[rowNum][i] * text.get(i);
@@ -104,6 +105,7 @@ public class Manager {
                   break;
               }
               if(j == 7) {
+                  System.out.println("tu cie mam, wychwycilem blad ");
                   int number = toChange.get(i);
                   number^=1;
                   toChange.set(i,number);
@@ -143,6 +145,7 @@ public class Manager {
     public static List<Integer> verification(List<Integer> text, int length) {
         boolean verified = true;
         List<Integer> toVerify = new ArrayList<>(List.copyOf(text));
+
 
         if (text.size() != length) {
             System.out.println("Niezgodna ilosc bitow");

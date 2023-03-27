@@ -103,6 +103,7 @@ public class Main {
 
         //ilosc znakow czyli ilosc 16-bitowych wektorow
         int signsNumber = 0;
+        StringBuilder response = new StringBuilder();
         List<Integer> everyWord = new ArrayList<>();
         System.out.println("rozmiar złej wiadmości: " + messageWithError.size());
 
@@ -123,10 +124,11 @@ public class Main {
         //ktory reprezentuje jeden znak
         // scalanie 16-bitowych wektorow w jeden i zapis do pliku
         for(int i = 0; i < size; i++) {
-            listOfWords.set(i, Manager.verification(listOfWords.get(i), 16));
+            listOfWords.set(i, Manager.verification(listOfWords.get(i), coded.size() / size));
             messageWithError.addAll(listOfWords.get(i));
             //zamiana kazdego ze zweryfikowanych 16-bitowych wektorow na pojedyncze znaki
             //i zapisanie ich do stringa
+            response.append(Manager.getChars(listOfWords.get(i)));
             saveChangedMessage.write(Manager.getChars(listOfWords.get(i)));
         }
 

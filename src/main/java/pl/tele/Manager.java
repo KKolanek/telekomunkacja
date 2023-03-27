@@ -37,9 +37,9 @@ public class Manager {
         List<Integer> toInt = new ArrayList<>();
         int sign;
 
-        for(int i =0; i < text.length(); i++) {
+        for(int i = 0; i < text.length(); i++) {
             sign = text.charAt(i);
-            for(int j =0; j < 8; j++) {
+            for(int j = 0; j < 8; j++) {
                 toInt.add(sign%2);
                 sign/=2;
             }
@@ -98,7 +98,7 @@ public class Manager {
     public static List<Integer> correction(List<Integer> incorrectMessage, List<Integer> E) {
         List<Integer> toChange = new ArrayList<>(List.copyOf(incorrectMessage));
         //musimy sprawdzic ktora z kolumn jest rowna wektorowi bledow E
-      for(int i =0; i < 8; i++) {
+      for(int i = 0; i < 8; i++) {
           for(int j =0; j < 8; j++) {
               if(H[j][i] != toChange.get(j)) {
                   break;
@@ -152,7 +152,7 @@ public class Manager {
         int number;
 
         //jesli w wetorze bledu wystapi wartosc 1 to musimy skorygowac wiadomosc
-       for(int i =0; i < row; i++) {
+       for(int i = 0; i < row; i++) {
            number = parityBit(text,i);
            E.add(number);
            if(number == 1) {

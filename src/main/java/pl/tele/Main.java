@@ -1,11 +1,8 @@
 package pl.tele;
 
 import com.diogonunes.jcolor.AnsiFormat;
-
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
-
 import static com.diogonunes.jcolor.Attribute.*;
 
 public class Main {
@@ -107,7 +104,7 @@ public class Main {
         //ilosc znakow czyli ilosc 16-bitowych wektorow
         int signsNumber = 0;
         List<Integer> everyWord = new ArrayList<>();
-        System.out.println("rozmiar zlej wiadmosc"+messageWithError.size());
+        System.out.println("rozmiar złej wiadmości: " + messageWithError.size());
 
         //podzial calej niepoprawnej wiadomosci na mniejsze 16-bitowe wektory
         for(int i = 0; i < messageWithError.size(); i++) {
@@ -136,7 +133,7 @@ public class Main {
 
         saveChangedMessage.close();
 
-        System.out.println("Wiadomosc poprawiona: ");
+        System.out.println("Wiadomość poprawiona: ");
         for(int i = 0; i < messageWithError.size(); i++) {
             System.out.print(messageWithError.get(i));
             if((i+1) % 8 == 0) {
@@ -144,7 +141,7 @@ public class Main {
             }
         }
         System.out.println(fInfo.format("Bity: " + messageWithError.size()));
-        System.out.println("Wiadomosc odebrana");
+        System.out.println("Wiadomość odebrana");
     }
 
 

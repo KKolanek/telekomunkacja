@@ -1,6 +1,7 @@
 package pl.tele;
 
 import com.diogonunes.jcolor.AnsiFormat;
+
 import java.io.*;
 import java.util.*;
 import static com.diogonunes.jcolor.Attribute.*;
@@ -8,7 +9,6 @@ import static com.diogonunes.jcolor.Attribute.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-
 
         AnsiFormat fInfo = new AnsiFormat(BLUE_TEXT());
 
@@ -32,7 +32,7 @@ public class Main {
 
         //zamiana na system binarny
         message = Manager.charToInt(text.toString());
-        System.out.println("Wiadomosc binarnie: " + text);
+        System.out.println("Wiadomosc  " + text);
 
         for (int i = 0; i < message.size(); i++) {
             System.out.print(message.get(i));
@@ -105,7 +105,6 @@ public class Main {
         int signsNumber = 0;
         StringBuilder response = new StringBuilder();
         List<Integer> everyWord = new ArrayList<>();
-        System.out.println("rozmiar złej wiadmości: " + messageWithError.size());
 
         //podzial calej niepoprawnej wiadomosci na mniejsze 16-bitowe wektory
         for(int i = 0; i < messageWithError.size(); i++) {
@@ -116,7 +115,8 @@ public class Main {
                 everyWord.clear();
             }
         }
-        messageWithError.clear(); 
+
+        messageWithError.clear();
 
         FileWriter saveChangedMessage = new FileWriter("wiadomoscOdebrana.txt");
 
@@ -135,7 +135,7 @@ public class Main {
 
         saveChangedMessage.close();
 
-        System.out.println("Wiadomość poprawiona: ");
+        System.out.println("Wiadomosc poprawiona: ");
         for(int i = 0; i < messageWithError.size(); i++) {
             System.out.print(messageWithError.get(i));
             if((i+1) % 8 == 0) {
@@ -143,7 +143,8 @@ public class Main {
             }
         }
         System.out.println(fInfo.format("Bity: " + messageWithError.size()));
-        System.out.println("Wiadomość odebrana");
+        System.out.println("Wiadomosc odebrana");
+        System.out.println(response);
     }
 
 

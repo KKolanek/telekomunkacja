@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="def55728-a4ff-4bb6-8a30-df00927f1eef" name="Changes" comment="nie ma gitignore chyba">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/tele/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/tele/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/tele/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/tele/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/tele/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/tele/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/tele/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/tele/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wiadomoscZakodowana.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wiadomoscZakodowana.txt" afterDir="false" />
-    </list>
+    <list default="true" id="4d207175-e712-4e9c-af19-10b48af71ce6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,7 +20,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2NVLUmRTzvucUx5rnnbXixA6d2b" />
+  <component name="ProjectId" id="2Q0WS6zhtcZSbkH15Vf69wnHKY6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,41 +28,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Kamil/IdeaProjects/AC_CA"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="def55728-a4ff-4bb6-8a30-df00927f1eef" name="Changes" comment="wiesz co to" />
-      <created>1679744321016</created>
+      <changelist id="4d207175-e712-4e9c-af19-10b48af71ce6" name="Changes" comment="" />
+      <created>1684490977958</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679744321016</updated>
+      <updated>1684490977958</updated>
     </task>
-    <task id="LOCAL-00001" summary="nie ma gitignore chyba">
-      <created>1679930767204</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1679930767204</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="nie ma gitignore chyba" />
-    <option name="LAST_COMMIT_MESSAGE" value="nie ma gitignore chyba" />
   </component>
 </project>
